@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+/**
+ * Die einzelnen Geschlechter werden hier zentral generiert, gesammelt, gespeichert und nötigenfalls geändert
+ */
+public class GeschlechtVerwaltung {
+
+	private ArrayList<Geschlecht> geschlechtList;
+	
+	public GeschlechtVerwaltung() {
+		ArrayList<Geschlecht> geschlechtList=new ArrayList<Geschlecht>();
+		
+	}
+	
+	private void erstelleAlleGeschlechter()
+	{
+		//Im Moment werden die Geschlechter noch von Hand erstellt. Später soll dies durch eine vorgefertigte Datei geschehen, welche alle Daten beinhaltet, welche dann eingelesen wird.
+		
+		Geschlecht männlich=new Geschlecht("M");
+		Geschlecht weiblich=new Geschlecht("W");
+		addGeschlecht(männlich);
+	}
+	
+	private void addGeschlecht(Geschlecht geschlecht)
+	{
+		this.geschlechtList.add(geschlecht);
+	}
+	
+	public Job getGeschlecht(int eintragsnummer)
+	{
+		assert (eintragsnummer<this.geschlechtList.size() && eintragsnummer>=0);
+		
+		return this.geschlechtList.get(eintragsnummer);
+	}
+	
+	public String toString()
+	{
+		return "GeschlechtVerwaltung: " +this.geschlechtList.toString();
+	}
+
+}
