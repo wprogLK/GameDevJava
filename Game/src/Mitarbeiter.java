@@ -8,6 +8,7 @@ public class Mitarbeiter
 	private Aussehen aussehen;
 	private Boolean istFreierMitarbeiter;
 	private Boolean istAngestellterMitarbeiter;
+	private Boolean istAnstellbarerMitarbeiter;
 	private Job job;
 	private int grundLohn;
 	private MitarbeiterEigenschaft mitarbeiterEigenschaft;
@@ -31,6 +32,12 @@ public class Mitarbeiter
 		this.fähigkeiten = fähigkeiten;
 		this.maxEnergie = maxEnergie;
 		this.maxKreativität = maxKreativität;
+		
+		if (this.istFreierMitarbeiter==false && this.istAngestellterMitarbeiter==false)
+		{
+			this.istAnstellbarerMitarbeiter=true;
+		}
+		
 	}
 	//GETTERS & SETTERS:
 	
@@ -66,6 +73,11 @@ public class Mitarbeiter
 
 	public Boolean getIstAngestellterMitarbeiter() {
 		return istAngestellterMitarbeiter;
+	}
+	
+	public Boolean getIstAnstellbarerMitarbeit()
+	{
+		return this.istAnstellbarerMitarbeiter;
 	}
 
 
@@ -106,6 +118,11 @@ public class Mitarbeiter
 
 	public void setIstAngestellterMitarbeiter(Boolean istAngestellterMitarbeiter) {
 		this.istAngestellterMitarbeiter = istAngestellterMitarbeiter;
+	}
+	
+	public void setIstAnstellbarerMitarbeit(Boolean istAnstellbarerMitarbeiter)
+	{
+		this.istAnstellbarerMitarbeiter=istAnstellbarerMitarbeiter;
 	}
 
 

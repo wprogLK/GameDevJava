@@ -60,7 +60,6 @@ public class GameTest
 	@Given("vorbereitungMitarbeiter")
 	public Game MitarbeiterErstellen(Game game)
 	{
-		game.generiereMitarbeiter("Max", "Muster", geschlechtMaennlich, "Dies ist Max Muster, ein Programmierneuling",aussehenTypA, false, false, jobProgrammierer,10,mitarbeiterEigenschaften.getEigenschaft(1),fähigkeiten(20,15,10,15), 100,100); // (String Vorname, String Nachname,Geschlecht Geschlecht,String Beschreibung,Aussehen Aussehen,Boolean istFreierMitarbeiter,Boolean istEingestellt,Job Job, int GrundLohn,Eigenschaft Eigenschaft,Fähigkeiten Fähigkeiten(int Code, int Schreiben,int Grafik,int Spezial),int MaxEnergie, int MaxKreativitaet)
 		
 		//TODO: Test schreiben
 		assertTrue(game.getAnzahlGenerierterMitarbeiter()==1);

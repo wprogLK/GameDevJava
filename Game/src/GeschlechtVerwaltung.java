@@ -19,6 +19,7 @@ public class GeschlechtVerwaltung {
 		Geschlecht männlich=new Geschlecht("M");
 		Geschlecht weiblich=new Geschlecht("W");
 		addGeschlecht(männlich);
+		addGeschlecht(weiblich);
 	}
 	
 	private void addGeschlecht(Geschlecht geschlecht)
@@ -26,7 +27,7 @@ public class GeschlechtVerwaltung {
 		this.geschlechtList.add(geschlecht);
 	}
 	
-	public Job getGeschlecht(int eintragsnummer)
+	public Geschlecht getGeschlecht(int eintragsnummer)
 	{
 		assert (eintragsnummer<this.geschlechtList.size() && eintragsnummer>=0);
 		
