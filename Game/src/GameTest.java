@@ -19,7 +19,6 @@
  * |----------------|-------------------|-------------------|---------------------------------------------------------------|
  * 
  */
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import ch.unibe.jexample.JExample;
@@ -44,6 +43,7 @@ public class GameTest
 		assertTrue(game.getMitarbeiterVerwaltung().getAnzahlAngestellteMitarbeiter()==0);
 		assertTrue(game.getMitarbeiterVerwaltung().getAnzahlAnstellbareMitarbeiter()==0);
 		assertTrue(game.getMitarbeiterVerwaltung().getAnzahlFreieMitarbeiter()==0);
+	
 		return game;
 
 	}
@@ -77,7 +77,9 @@ public class GameTest
 	public void GeschlechtVerwaltungTest()
 	{
 		GeschlechtVerwaltung verwaltung=new GeschlechtVerwaltung();
-		//Noch nichts zu testen
+		assertTrue(verwaltung.getGeschlecht(0).toString().matches("Geschlecht: M"));
+		assertTrue(verwaltung.getGeschlecht(1).toString().matches("Geschlecht: W"));
+		
 		//TODO: Noch Test schreiben
 	}
 	
@@ -85,6 +87,13 @@ public class GameTest
 	public void FähigkeitenVerwaltungTest()
 	{
 		FähigkeitenVerwaltung verwaltung=new FähigkeitenVerwaltung(10,20,30,40);
+		System.out.println(verwaltung.toString());
+		assertTrue(verwaltung.getFähigkeit(0).toString().matches("Fähigkeit: Code Wert: 10 Bonuswert: 0 zunahmeBeiaufLevelnFaktor: 1"));
+		assertTrue(verwaltung.getFähigkeit(1).toString().matches("Fähigkeit: Schreiben Wert: 20 Bonuswert: 0 zunahmeBeiaufLevelnFaktor: 1"));
+		assertTrue(verwaltung.getFähigkeit(2).toString().matches("Fähigkeit: Grafik Wert: 30 Bonuswert: 0 zunahmeBeiaufLevelnFaktor: 1"));
+		assertTrue(verwaltung.getFähigkeit(3).toString().matches("Fähigkeit: Spezial Wert: 40 Bonuswert: 0 zunahmeBeiaufLevelnFaktor: 1"));
+		
+		
 		//Noch nichts zu testen
 		//TODO: Noch Test schreiben
 	}
@@ -93,6 +102,7 @@ public class GameTest
 	public void MitarbeiterEigenschaftenVerwaltungTest()
 	{
 		MitarbeiterEigenschaftenVerwaltung verwaltung=new MitarbeiterEigenschaftenVerwaltung();
+		System.out.println(verwaltung.toString());
 		//Noch nichts zu testen
 		//TODO: Noch Test schreiben
 	}
