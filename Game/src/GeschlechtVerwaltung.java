@@ -8,8 +8,9 @@ public class GeschlechtVerwaltung {
 	private ArrayList<Geschlecht> geschlechtList;
 	
 	public GeschlechtVerwaltung() {
-		ArrayList<Geschlecht> geschlechtList=new ArrayList<Geschlecht>();
+		this.geschlechtList=new ArrayList<Geschlecht>();
 		
+		this.erstelleAlleGeschlechter();
 	}
 	
 	private void erstelleAlleGeschlechter()

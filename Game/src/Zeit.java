@@ -17,9 +17,9 @@ public class Zeit {
 		this.monate=0;
 		this.jahre=0;
 		
-		zeitGeschwindigkeitNormal=new ZeitGeschwindigkeit("Normal",1);
-		zeitGeschwindigkeitSchnell=new ZeitGeschwindigkeit("Schnell", 2);
-		zeitGeschwindigkeitSehrSchnell=new ZeitGeschwindigkeit("Sehr Schnell",3);
+		this.zeitGeschwindigkeitNormal=new ZeitGeschwindigkeit("Normal",1);
+		this.zeitGeschwindigkeitSchnell=new ZeitGeschwindigkeit("Schnell", 2);
+		this.zeitGeschwindigkeitSehrSchnell=new ZeitGeschwindigkeit("Sehr Schnell",3);
 	}
 	
 

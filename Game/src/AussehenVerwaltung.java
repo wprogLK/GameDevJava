@@ -10,7 +10,7 @@ public class AussehenVerwaltung {
 	
 	public AussehenVerwaltung() 
 	{
-		ArrayList<Aussehen> aussehenList=new ArrayList<Aussehen>();
+		this.aussehenList=new ArrayList<Aussehen>();
 		
 		this.erstelleAlleAussehen();
 	}

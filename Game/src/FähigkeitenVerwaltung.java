@@ -12,21 +12,19 @@ public class FähigkeitenVerwaltung {
 	
 	private ArrayList<Fähigkeit> fähigkeitenList;
 	
-	public FähigkeitenVerwaltung(int wertCode, int bonusWertCode,int zunahmeBeiaufLevelnFaktorCode,int wertSchreiben, int bonusWertSchreiben,int zunahmeBeiaufLevelnFaktorSchreiben,int wertGrafik, int bonusWertGrafik,int zunahmeBeiaufLevelnFaktorGrafik,int wertSpezial, int bonusWertSpezial,int zunahmeBeiaufLevelnFaktorSpezial)
+	public FähigkeitenVerwaltung(int wertCode, int wertSchreiben, int wertGrafik, int wertSpezial)
 	{
+		this.fähigkeitenList=new ArrayList<Fähigkeit>();
 		
-		//TODO: HIER MORGEN WEITER MACHEN
-		ArrayList<Fähigkeit> fähigkeitenList=new ArrayList<Fähigkeit>();
-		
-		this.erstelleAlleFähigkeiten();
+		this.erstelleAlleFähigkeiten(wertCode, wertSchreiben, wertGrafik, wertSpezial);
 	}
 	
-	private void erstelleAlleFähigkeiten()
+	private void erstelleAlleFähigkeiten(int wertCode, int wertSchreiben, int wertGrafik, int wertSpezial)
 	{															
-		Fähigkeit code=new Fähigkeit("Code",0,0,1);
-		Fähigkeit schreiben=new Fähigkeit("Schreiben",0,0,1);
-		Fähigkeit grafik=new Fähigkeit("Grafik",0,0,1);
-		Fähigkeit spezial=new Fähigkeit("Spezial",0,0,1);
+		Fähigkeit code=new Fähigkeit("Code",wertCode,0,1);
+		Fähigkeit schreiben=new Fähigkeit("Schreiben",wertSchreiben,0,1);
+		Fähigkeit grafik=new Fähigkeit("Grafik",wertGrafik,0,1);
+		Fähigkeit spezial=new Fähigkeit("Spezial",wertSpezial,0,1);
 		
 		addFähigkeit(code);
 		addFähigkeit(schreiben);

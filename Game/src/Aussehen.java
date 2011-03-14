@@ -2,7 +2,7 @@
 public class Aussehen {
 
 	public Aussehen() {
-		// TODO Auto-generated constructor stub
+		// TODO: Diese Klasse muss noch gemacht werden
 	}
 
 	/**

@@ -8,7 +8,9 @@ public class JobVerwaltung {
 	private ArrayList<Job> jobList;
 	
 	public JobVerwaltung() {
-		ArrayList<Job> jobList=new ArrayList<Job>();
+		this.jobList=new ArrayList<Job>();
+		
+		this.erstelleAlleJobs();
 		
 	}
 	

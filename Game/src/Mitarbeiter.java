@@ -16,9 +16,9 @@ public class Mitarbeiter
 	private int maxEnergie;
 	private int maxKreativität;
 	
-	
 	public Mitarbeiter(String vorname, String nachname, Geschlecht geschlecht, String beschreibung, Aussehen aussehen, Boolean istFreierMitarbeiter, Boolean istAngestellterMitarbeiter, Job job, int grundLohn, MitarbeiterEigenschaft mitarbeiterEigenschaft, FähigkeitenVerwaltung fähigkeitenVerwaltung,int maxEnergie, int maxKreativität)
 	{
+		
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.geschlecht = geschlecht;

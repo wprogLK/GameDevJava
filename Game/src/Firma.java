@@ -6,8 +6,6 @@ public class Firma
 	private String name;
 	private String bossName;
 	private int geld;
-	private int anzahlAngestellterMitarbeiter;
-	private ArrayList<Mitarbeiter> angestellteMitarbeiter;
 	
 	public Firma(String firmaName, String firmaBossName,int geld) 
 	{
@@ -33,10 +31,6 @@ public class Firma
 		return this.geld;
 	}
 	
-	public int getAnzahlAngestellterMitarbeiter() 
-	{
-		return angestellteMitarbeiter.size();
-	}
 	
 	/**
 	 * Diese Methode ist als "Cheat" gedacht für TestZecke
@@ -54,10 +48,6 @@ public class Firma
 		this.geld=this.geld+geld;
 	}
 	
-	public void mitarbeiterEinstellen(Mitarbeiter mitarbeiter)
-	{
-		angestellteMitarbeiter.add(mitarbeiter);
-	}
 	
 	
 

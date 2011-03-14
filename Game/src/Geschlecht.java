@@ -8,17 +8,16 @@
  */
 public class Geschlecht {
 
+	private String bezeichnung;
 
-	public Geschlecht(String string) {
+	public Geschlecht(String bezeichnung) {
 		// TODO Auto-generated constructor stub
+		this.bezeichnung=bezeichnung;
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public String toString()
+	{
+		return "Geschlecht: " + this.bezeichnung;
 	}
 
 }
