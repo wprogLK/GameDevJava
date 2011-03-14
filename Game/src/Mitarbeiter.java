@@ -12,12 +12,12 @@ public class Mitarbeiter
 	private Job job;
 	private int grundLohn;
 	private MitarbeiterEigenschaft mitarbeiterEigenschaft;
-	private Fähigkeiten fähigkeiten;
+	private FähigkeitenVerwaltung fähigkeitenVerwaltung;
 	private int maxEnergie;
 	private int maxKreativität;
 	
 	
-	public Mitarbeiter(String vorname, String nachname, Geschlecht geschlecht, String beschreibung, Aussehen aussehen, Boolean istFreierMitarbeiter, Boolean istAngestellterMitarbeiter, Job job, int grundLohn, MitarbeiterEigenschaft mitarbeiterEigenschaft, Fähigkeiten fähigkeiten,int maxEnergie, int maxKreativität)
+	public Mitarbeiter(String vorname, String nachname, Geschlecht geschlecht, String beschreibung, Aussehen aussehen, Boolean istFreierMitarbeiter, Boolean istAngestellterMitarbeiter, Job job, int grundLohn, MitarbeiterEigenschaft mitarbeiterEigenschaft, FähigkeitenVerwaltung fähigkeitenVerwaltung,int maxEnergie, int maxKreativität)
 	{
 		this.vorname = vorname;
 		this.nachname = nachname;
@@ -29,7 +29,7 @@ public class Mitarbeiter
 		this.job = job;
 		this.grundLohn = grundLohn;
 		this.mitarbeiterEigenschaft = mitarbeiterEigenschaft;
-		this.fähigkeiten = fähigkeiten;
+		this.fähigkeitenVerwaltung = fähigkeitenVerwaltung;
 		this.maxEnergie = maxEnergie;
 		this.maxKreativität = maxKreativität;
 		
@@ -96,8 +96,8 @@ public class Mitarbeiter
 	}
 
 
-	public Fähigkeiten getFähigkeiten() {
-		return fähigkeiten;
+	public FähigkeitenVerwaltung getFähigkeitenVerwaltung() {
+		return fähigkeitenVerwaltung;
 	}
 
 
@@ -141,8 +141,8 @@ public class Mitarbeiter
 	}
 
 
-	public void setFähigkeiten(Fähigkeiten fähigkeiten) {
-		this.fähigkeiten = fähigkeiten;
+	public void setFähigkeitenVerwaltung(FähigkeitenVerwaltung fähigkeitenVerwaltung) {
+		this.fähigkeitenVerwaltung = fähigkeitenVerwaltung;
 	}
 
 

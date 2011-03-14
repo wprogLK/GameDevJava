@@ -9,32 +9,38 @@ import java.util.ArrayList;
  *
  */
 public class FähigkeitenVerwaltung {
-
-//TODO: HIER WEITER MACHEN
+	
 	private ArrayList<Fähigkeit> fähigkeitenList;
 	
-	public FähigkeitenVerwaltung() 
+	public FähigkeitenVerwaltung(int wertCode, int bonusWertCode,int zunahmeBeiaufLevelnFaktorCode,int wertSchreiben, int bonusWertSchreiben,int zunahmeBeiaufLevelnFaktorSchreiben,int wertGrafik, int bonusWertGrafik,int zunahmeBeiaufLevelnFaktorGrafik,int wertSpezial, int bonusWertSpezial,int zunahmeBeiaufLevelnFaktorSpezial)
 	{
+		
+		//TODO: HIER MORGEN WEITER MACHEN
 		ArrayList<Fähigkeit> fähigkeitenList=new ArrayList<Fähigkeit>();
 		
-		this.erstelleAlleAussehen();
+		this.erstelleAlleFähigkeiten();
 	}
 	
-	private void erstelleAlleAussehen()
-	{
-		//TODO: Im Moment werden die AussehenTypen noch von Hand erstellt. Später soll dies durch eine vorgefertigte Datei geschehen, welche alle Daten beinhaltet, welche dann eingelesen wird.
+	private void erstelleAlleFähigkeiten()
+	{															
+		Fähigkeit code=new Fähigkeit("Code",0,0,1);
+		Fähigkeit schreiben=new Fähigkeit("Schreiben",0,0,1);
+		Fähigkeit grafik=new Fähigkeit("Grafik",0,0,1);
+		Fähigkeit spezial=new Fähigkeit("Spezial",0,0,1);
 		
-		Aussehen aussehenTypEins=new Aussehen(); //TODO: Aussehen(Grafik normal, grafik..., grafik...)
-		addAussehen(aussehenTypEins);
+		addFähigkeit(code);
+		addFähigkeit(schreiben);
+		addFähigkeit(grafik);
+		addFähigkeit(spezial);
 	}
 	
-	private void addFähigkeit(Fähigkeit aussehen)
+	private void addFähigkeit(Fähigkeit fähigkeit)
 	{
-		assert !this.fähigkeitenList.contains(aussehen);
-		this.fähigkeitenList.add(aussehen);
+		assert !this.fähigkeitenList.contains(fähigkeit);
+		this.fähigkeitenList.add(fähigkeit);
 	}
 	
-	public Aussehen getAussehen(int eintragsnummer)
+	public Fähigkeit getFähigkeit(int eintragsnummer)
 	{
 		assert (eintragsnummer<this.fähigkeitenList.size() && eintragsnummer>=0);
 		
@@ -43,7 +49,7 @@ public class FähigkeitenVerwaltung {
 	
 	public String toString()
 	{
-		return "AussehenVerwaltung: " +this.fähigkeitenList.toString();
+		return "FähigkeitVerwaltung: " +this.fähigkeitenList.toString();
 	}
 
 	

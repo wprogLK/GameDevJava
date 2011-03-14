@@ -15,6 +15,7 @@ public class MitarbeiterVerwaltung {
 	private FähigkeitenVerwaltung fähigkeitenVerwaltung;
 	private MitarbeiterEigenschaftenVerwaltung mitarbeiterEigenschaftVerwaltung;
 	private AussehenVerwaltung aussehenVerwaltung;
+	private JobVerwaltung jobVerwaltung;
 
 	
 	public MitarbeiterVerwaltung() 
@@ -26,7 +27,7 @@ public class MitarbeiterVerwaltung {
 		GeschlechtVerwaltung geschlechterVerwaltung=new GeschlechtVerwaltung();
 		FähigkeitenVerwaltung fähigkeitenVerwaltung=new FähigkeitenVerwaltung();
 		MitarbeiterEigenschaftenVerwaltung mitarbeiterEigenschaftenVerwaltung=new MitarbeiterEigenschaftenVerwaltung();
-		
+		JobVerwaltung jobVerwaltung=new JobVerwaltung();
 		
 		
 		assert generierteMitarbeiter.size()==0;
@@ -117,6 +118,7 @@ public class MitarbeiterVerwaltung {
 	private void createAlleMitarbeiter()
 	{
 		//TODO: HIER WEITER MACHEN
+		Mitarbeiter mitarbeiter1=new Mitarbeiter("Max","Muster",this.geschlechterVerwaltung.getGeschlecht(0),"Dies ist MaxMuster, ein Programmierneuling.",this.aussehenVerwaltung.getAussehen(0),false,false,this.jobVerwaltung.getJob(0),10,this.mitarbeiterEigenschaftVerwaltung.getMitarbeiterEigenschaft(0),this.fähigkeitenVerwaltung
 		("Max", "Muster", this.geschlechterVerwaltung.getGeschlecht(0), "Dies ist Max Muster, ein Programmierneuling",aussehenTypA, false, false, jobProgrammierer,10,mitarbeiterEigenschaften.getEigenschaft(1),fähigkeiten(20,15,10,15), 100,100); 
 		// (String Vorname, String Nachname,Geschlecht Geschlecht,String Beschreibung,Aussehen Aussehen,Boolean istFreierMitarbeiter,Boolean istEingestellt,Job Job, int GrundLohn,Eigenschaft Eigenschaft,Fähigkeiten Fähigkeiten(int Code, int Schreiben,int Grafik,int Spezial),int MaxEnergie, int MaxKreativitaet)
 		
@@ -131,17 +133,19 @@ public class MitarbeiterVerwaltung {
 		this.generierteMitarbeiter.add(mitarbeiter);
 	}
 
-	public void deleteMitarbeiteAusArrayListe(Mitarbeiter mitarbeiter)
+	public void removeAnstellbareMitarbeiter(Mitarbeiter mitarbeiter)
 	{
-		assert this.MitarbeiterList.contains(mitarbeiter);
 		
-		this.MitarbeiterList.remove(mitarbeiter);
+		//KOMMENTAR: Vielleicht wäre es besser entweder eine Methode in dieser Klasse zu schreiben, welche das Adden und Remoten steuert oder dies der Mitarbeiterklasse überlassen.
+		assert this.anstellbareMitarbeiter.contains(mitarbeiter);
+		
+		this.anstellbareMitarbeiter.remove(mitarbeiter);
 	}
 	
 
 
-	public String toString()
+	public String toStringFreieMitarbeiter()
 	{
-		return "Freie Mitarbeiter: " + this.MitarbeiterList.toString();
+		return "Freie Mitarbeiter: " + this.freieMitarbeiter.toString();
 	}
 }
