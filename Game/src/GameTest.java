@@ -21,6 +21,10 @@
  */
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import ch.unibe.jexample.JExample;
 import ch.unibe.jexample.Given;
 import org.junit.Test;
@@ -115,6 +119,15 @@ public class GameTest
 		//TODO: Noch Test schreiben
 	}
 	
+	@Test
+	public void DateiLesenTest() throws IOException
+	{
+		Funktionen funktionen=new Funktionen();
+		ArrayList<ArrayList<String>> s=funktionen.leseDatei("testFileLesen.gd");
+		System.out.println("Das ist die ArrayList: " + s.toString());
+		
+		
+	}
 	
 
 }
