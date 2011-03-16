@@ -122,7 +122,7 @@ public class GameTest
 	@Test
 	public void DateiLesenTest() throws IOException
 	{
-		Funktionen funktionen=new Funktionen();
+		Funktionen funktionen=new Funktionen("/home/lukas/Projekte/Java/GameDevJavaNew/Game/src/resource/");
 		ArrayList<ArrayList<String>> s=funktionen.leseDatei("testFileLesen.gd");
 		System.out.println("Das ist die ArrayList: " + s.toString());
 		

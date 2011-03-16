@@ -14,26 +14,28 @@ public class Funktionen {
 	/**
 	 * 
 	 */
-	public Funktionen() {
+	private String pfad;
+	
+	public Funktionen(String pfad) {
 		// TODO Auto-generated constructor stub
+		this.pfad=pfad;
 	}
 	
 	public ArrayList<ArrayList<String>> leseDatei(String dateiName) throws IOException
 	{
-			FileReader fr =new FileReader(dateiName);
+			FileReader fr =new FileReader(pfad + dateiName);
 			BufferedReader br=new BufferedReader(fr);
 			
 			ArrayList<ArrayList<String>> output=new ArrayList<ArrayList<String>>();
 			
+			String teilString;
+			teilString=br.readLine();
 			
-			while ((br.readLine() != null))
+			while ((teilString !=null))
 			{
 				ArrayList<String> teilArray = new ArrayList<String>();
-				String teilString;
-				
-				teilString=br.readLine();
 				String[] tmpString;
-				
+				System.out.println("TEILSTRING: " + teilString);
 				tmpString=teilString.split(" "); //TODO: ANDERES TRENNZEICHEN NEHMEN!
 				
 				for (int i=0; i<tmpString.length;i++)
@@ -42,6 +44,9 @@ public class Funktionen {
 				}
 				
 				output.add(teilArray);
+				
+				teilString=br.readLine();
+				
 				
 			}
 			
