@@ -1,17 +1,17 @@
 
-public class Fähigkeit {
+public class Fähigkeit implements IFähigkeit{
 
 	private String name;
 	private int wert;
 	private int bonusWert;
-	private int zunahmeBeiaufLevelnFaktor;
+	private double zunahmeBeiAuflevelnFaktor;
 	
-	public Fähigkeit(String name,int wert, int bonusWert,int zunahmeBeiaufLevelnFaktor) {
+	public Fähigkeit(String name,int wert, int bonusWert,double zunahmeBeiAuflevelnFaktor)  {
 		// TODO Auto-generated constructor stub
 		this.name=name;
 		this.wert=wert;
 		this.bonusWert=bonusWert;
-		this.zunahmeBeiaufLevelnFaktor=zunahmeBeiaufLevelnFaktor;
+		this.zunahmeBeiAuflevelnFaktor=zunahmeBeiAuflevelnFaktor;
 	}
 
 	//Getters & Setters:
@@ -32,12 +32,12 @@ public class Fähigkeit {
 		this.bonusWert = bonusWert;
 	}
 
-	public int getZunahmeBeiaufLevelnFaktor() {
-		return zunahmeBeiaufLevelnFaktor;
+	public double getZunahmeBeiAuflevelnFaktor() {
+		return zunahmeBeiAuflevelnFaktor;
 	}
 
-	public void setZunahmeBeiaufLevelnFaktor(int zunahmeBeiaufLevelnFaktor) {
-		this.zunahmeBeiaufLevelnFaktor = zunahmeBeiaufLevelnFaktor;
+	public void setZunahmeBeiAuflevelnFaktor(double zunahmeBeiAuflevelnFaktor) {
+		this.zunahmeBeiAuflevelnFaktor = zunahmeBeiAuflevelnFaktor;
 	}
 
 	public String getName() {
@@ -53,7 +53,7 @@ public class Fähigkeit {
 	
 	public String toString()
 	{
-		return "Fähigkeit: " + this.name + " Wert: " +Integer.toString(this.wert)+" Bonuswert: " + Integer.toString(this.bonusWert) + " zunahmeBeiaufLevelnFaktor: " + Integer.toString(this.zunahmeBeiaufLevelnFaktor);
+		return "Fähigkeit: " + this.name + " Wert: " +Integer.toString(this.wert)+" Bonuswert: " + Integer.toString(this.bonusWert) + " zunahmeBeiAuflevelnFaktor: " + Double.toString(this.zunahmeBeiAuflevelnFaktor);
 	}
 
 }
